@@ -1,0 +1,27 @@
+<div style="display: flex; flex: auto; justify-content: center; margin-top: 50px;">
+
+    <form style="text-align: center;" [formGroup]="appForm" (ngSubmit)="onSubmit(appForm.value)">
+        <h1>Edit Task</h1>
+        <div style="height: 100%; justify-content: space-evenly;">
+
+            <div class="form-group" style="margin-top: 20px;">
+                <label for="taskName">Task</label>
+                <input class="form-control" id="taskName" formControlName="name" value={{taskToEdit.Name}}>
+            </div>
+            <div class="form-group" style="margin-top: 20px;">
+                <label for="albutaskDescriptionmTitle">Description</label>
+                <textarea class="form-control" id="taskDescription" formControlName="description"
+                    value={{taskToEdit.Description}}></textarea>
+            </div>
+            <div class="form-group" style="margin-top: 20px;">
+                <label for="taskHours">Estimatied Time</label>
+                <input class="form-control" id="taskHours" formControlName="hours" type="number"
+                    value={{taskToEdit.Hours}}>
+            </div>
+
+
+            <button type="submit" class="btn btn-primary" style="margin-top: 20px;">Update</button>
+        </div>
+
+    </form>
+</div>
